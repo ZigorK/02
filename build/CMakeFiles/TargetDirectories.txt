@@ -1,0 +1,11 @@
+/home/ziigork/Project/02/build/CMakeFiles/ip_filter.dir
+/home/ziigork/Project/02/build/CMakeFiles/test_ip_filter.dir
+/home/ziigork/Project/02/build/CMakeFiles/package.dir
+/home/ziigork/Project/02/build/CMakeFiles/package_source.dir
+/home/ziigork/Project/02/build/CMakeFiles/test.dir
+/home/ziigork/Project/02/build/CMakeFiles/edit_cache.dir
+/home/ziigork/Project/02/build/CMakeFiles/rebuild_cache.dir
+/home/ziigork/Project/02/build/CMakeFiles/list_install_components.dir
+/home/ziigork/Project/02/build/CMakeFiles/install.dir
+/home/ziigork/Project/02/build/CMakeFiles/install/local.dir
+/home/ziigork/Project/02/build/CMakeFiles/install/strip.dir

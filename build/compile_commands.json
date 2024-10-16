@@ -1,0 +1,14 @@
+[
+{
+  "directory": "/home/ziigork/Project/02/build",
+  "command": "/usr/bin/c++  -I/home/ziigork/Project/02 -g -std=gnu++14 -o CMakeFiles/ip_filter.dir/ip_filter.cpp.o -c /home/ziigork/Project/02/ip_filter.cpp",
+  "file": "/home/ziigork/Project/02/ip_filter.cpp",
+  "output": "CMakeFiles/ip_filter.dir/ip_filter.cpp.o"
+},
+{
+  "directory": "/home/ziigork/Project/02/build",
+  "command": "/usr/bin/c++ -DBOOST_UNIT_TEST_FRAMEWORK_DYN_LINK -DBOOST_UNIT_TEST_FRAMEWORK_NO_LIB -I/home/ziigork/Project/02 -g -std=gnu++14 -o CMakeFiles/test_ip_filter.dir/test_ip_filter.cpp.o -c /home/ziigork/Project/02/test_ip_filter.cpp",
+  "file": "/home/ziigork/Project/02/test_ip_filter.cpp",
+  "output": "CMakeFiles/test_ip_filter.dir/test_ip_filter.cpp.o"
+}
+]
