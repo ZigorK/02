@@ -159,6 +159,5 @@ CMakeFiles/ip_filter.dir/ip_filter.cpp.o: \
  /usr/include/c++/13/bits/algorithmfwd.h \
  /usr/include/c++/13/bits/stl_heap.h \
  /usr/include/c++/13/bits/uniform_int_dist.h \
- /usr/include/c++/13/bits/stl_tempbuf.h /usr/include/c++/13/tuple \
- /usr/include/c++/13/bits/uses_allocator.h \
+ /usr/include/c++/13/bits/stl_tempbuf.h \
  /home/ziigork/Project/02/ip_filter.h

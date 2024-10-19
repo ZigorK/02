@@ -5,7 +5,6 @@
 #include <string>
 #include <vector>
 #include <algorithm> // Для std::sort
-#include <tuple> // Для использования кортежей
 #include "ip_filter.h"
 
 // Функция для разделения строки на части
@@ -17,10 +16,11 @@ std::vector<std::string> split(const std::string &str, char d) {
         return r; // Возвращаем пустой вектор
     }
 
-    std::string::size_type start = 0;
+    std::string::size_type start = 0; // начало текущей подстроки 
     std::string::size_type stop = str.find_first_of(d);
 
-    while (stop != std::string::npos) {
+    while (stop != std::string::npos) //npos - это специальная константа в C++ для работы со строками, которая используется в классе std::string. Она представляет значение, указывающее на то, что не удалось найти нужный символ или подстроку в строке
+    {
         // Добавляем подстроку между разделителями
         r.push_back(str.substr(start, stop - start));
         start = stop + 1; // Переход к следующему символу после разделителя
@@ -34,16 +34,17 @@ std::vector<std::string> split(const std::string &str, char d) {
 }
 
 bool compareIPs(const std::vector<std::string>& a, const std::vector<std::string>& b) {
-    for (size_t i = 0; i < 4; ++i) { // Предполагаем, что IP-адрес состоит из 4 частей
-        int partA = (i < a.size()) ? std::stoi(a[i]) : 0; // Преобразуем строку в целое число
-        int partB = (i < b.size()) ? std::stoi(b[i]) : 0; // Если часть отсутствует, считаем ее равной 0
+    for (size_t i = 0; i < 4; ++i) {
+        int partA = (i < a.size()) ? std::stoi(a[i]) : 0;
+        int partB = (i < b.size()) ? std::stoi(b[i]) : 0;
 
         if (partA != partB) {
-            return partA < partB; // Сравниваем части
+            return partA > partB; // Сравниваем в обратном порядке
         }
     }
     return false; // Если все части равны
 }
+
 
 void printIPAddresses(const std::vector<std::vector<std::string>>& ip_pool) {
     for (const auto& ip : ip_pool) {
