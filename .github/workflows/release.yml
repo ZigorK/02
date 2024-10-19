@@ -12,7 +12,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 60  # Увеличьте время выполнения, если это необходимо
+    timeout-minutes: 60
 
     steps:
       - name: Checkout repository
@@ -32,12 +32,10 @@ jobs:
             openmpi-bin \
             libopenmpi-dev
 
-      # Отладка перед сборкой
-      - name: Debug - Post install
-        run: echo "Dependencies installed"
-
-      - name: Create build directory
-        run: mkdir -p build
+      - name: Clean build directory
+        run: |
+          rm -rf build
+          mkdir build
 
       - name: Configure with CMake
         run: |
@@ -59,14 +57,12 @@ jobs:
           cd build
           cmake --build . --target package
 
-      # Отладка перед проверкой существования пакета
       - name: Debug - List contents of build directory after package creation
         run: ls -l ./build
 
-      # Проверка существования пакета для Linux
       - name: Check if Linux package exists
         run: |
-          if [ -f "./build/IFilterProject-0.1.0-Linux.sh" ]; then  # Убедитесь, что имя файла правильное
+          if [ -f "./build/IFilterProject-0.1.0-Linux.sh" ]; then
             echo "Linux package exists."
           else
             echo "Linux package does not exist."
@@ -84,23 +80,19 @@ jobs:
           draft: false
           prerelease: false
 
-      # Отладка перед загрузкой ассета
-      - name: Debug - List contents of build directory before upload
-        run: ls -l ./build
-
       - name: Upload Release Asset
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./build/IFilterProject-0.1.0-Linux.sh  # Убедитесь, что путь правильный для созданного пакета 
-          asset_name: IFilterProject-0.1.0-Linux.sh 
+          asset_path: ./build/IFilterProject-0.1.0-Linux.sh
+          asset_name: IFilterProject-0.1.0-Linux.sh
           asset_content_type: application/x-sh
 
       - name: Debug - End
         run: echo "Ending the job"
-      
+
       - name: Debug - List all files in build directory at the end of the job
         run: |
           echo "Current directory:"
