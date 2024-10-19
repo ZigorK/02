@@ -1,7 +1,13 @@
 [
 {
   "directory": "/home/ziigork/Project/02/build",
-  "command": "/usr/bin/c++  -I/home/ziigork/Project/02 -g -std=gnu++14 -o CMakeFiles/ip_filter.dir/ip_filter.cpp.o -c /home/ziigork/Project/02/ip_filter.cpp",
+  "command": "/usr/bin/c++  -I/home/ziigork/Project/02 -g -std=gnu++14 -o CMakeFiles/ip_filter_lib.dir/ip_filter.cpp.o -c /home/ziigork/Project/02/ip_filter.cpp",
+  "file": "/home/ziigork/Project/02/ip_filter.cpp",
+  "output": "CMakeFiles/ip_filter_lib.dir/ip_filter.cpp.o"
+},
+{
+  "directory": "/home/ziigork/Project/02/build",
+  "command": "/usr/bin/c++   -g -std=gnu++14 -o CMakeFiles/ip_filter.dir/ip_filter.cpp.o -c /home/ziigork/Project/02/ip_filter.cpp",
   "file": "/home/ziigork/Project/02/ip_filter.cpp",
   "output": "CMakeFiles/ip_filter.dir/ip_filter.cpp.o"
 },

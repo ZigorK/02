@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ip_filter.dir/ip_filter.cpp.o"
   "CMakeFiles/ip_filter.dir/ip_filter.cpp.o.d"
-  "libip_filter.a"
-  "libip_filter.pdb"
+  "ip_filter"
+  "ip_filter.pdb"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -17,19 +17,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 50,
+				"line" : 52,
 				"parent" : 0
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 51,
+				"line" : 53,
 				"parent" : 0
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 54,
+				"line" : 56,
 				"parent" : 0
 			}
 		]
@@ -42,7 +42,7 @@
 			"destination" : "bin",
 			"paths" : 
 			[
-				"libip_filter.a"
+				"ip_filter"
 			],
 			"targetId" : "ip_filter::@6890427a1f51a3e7e1df",
 			"targetIndex" : 0,
@@ -68,7 +68,7 @@
 				"test_ip_filter"
 			],
 			"targetId" : "test_ip_filter::@6890427a1f51a3e7e1df",
-			"targetIndex" : 1,
+			"targetIndex" : 2,
 			"type" : "target"
 		},
 		{
@@ -77,7 +77,7 @@
 			"cxxModuleBmiTarget" : 
 			{
 				"id" : "test_ip_filter::@6890427a1f51a3e7e1df",
-				"index" : 1
+				"index" : 2
 			},
 			"destination" : "bin",
 			"type" : "cxxModuleBmi"

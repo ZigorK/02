@@ -110,7 +110,7 @@ int main(){
         std::vector<std::vector<std::string>> ip_pool;
 
         // Открываем файл для чтения
-        std::ifstream file("ip_filter.tsv");
+        std::ifstream file("/home/ziigork/Project/02/ip_filter.tsv");
         if (!file.is_open()) {
             throw std::runtime_error("Не удалось открыть файл ip_filter.tsv");
         }
@@ -127,18 +127,18 @@ int main(){
         std::sort(ip_pool.begin(), ip_pool.end(), compareIPs);
 
         // Выводим отсортированные IP-адреса
-        std::cout << "Полный список адресов после сортировки:\n";
+        std::cout << "Список адресов после сортировки:\n";
         printIPAddresses(ip_pool);
 
-        std::cout << "Вывод айпишек с 1" << "\n";
+        std::cout << "Вывод IP с 1:" << "\n";
         // Печать адресов с первым байтом равным 1
         printIPsWithFirstByte(ip_pool, 1);
 
-        std::cout << "Вывод айпишек с 46 и 70 " << "\n";
+        std::cout << "Вывод IP с 46 и 70:" << "\n";
         // Печать адресов с первым байтом равным 46 и вторым - 70
         printIPsWithFirstAndSecondByte(ip_pool, 46, 70);
 
-        std::cout << "Вывод айпишек с 46 " << "\n";    
+        std::cout << "Вывод IP с 46:" << "\n";    
         // Печать адресов с любым байтом равным 46
         printIPsWithAnyByte(ip_pool, 46);
 
